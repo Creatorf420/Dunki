@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="x-icon" href="Dunki.png">
+    <title>DUNKI</title>
+</head>
+<body>
+    <h1>DUNKI</h1>
+    <button class="button" onclick="dunkiRoute()">Start</button>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 10px;
+        }
+        
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .options {
+            margin-left: 20px;
+        }
+        
+        .choice {
+            margin-bottom: 10px;
+        }
+        
+        .choice input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function makeDecision(question, options) {
+            var choice = prompt(question + "\n\n" + options.join("\n"));
+            return parseInt(choice);
+        }
+        
+        function dunkiRoute() {
+            alert("Welcome to the Dunki Route Adventure!\n\nYou are in Bangladesh and want to travel to America.\n\nYour journey will be full of challenges and decisions.\n\nLet's see if you can make it to America safely!");
+            
+            // Decision 1
+            var decision1 = makeDecision("You come across a river. How do you want to cross it?", ["Swim", "Find a boat", "Look for a bridge"]);
+            
+            if (decision1 === 1) {
+                alert("Swimming across the river is risky. You struggle but manage to reach the other side.");
+            } else if (decision1 === 2) {
+                alert("You find a small boat and successfully cross the river.");
+            } else {
+                alert("You spend some time searching and find a bridge to cross the river safely.");
+            }
+            
+            // Decision 2
+            var decision2 = makeDecision("You reach a dense forest. What do you want to do?", ["Go through the forest", "Find a path around", "Climb a tree to get a better view"]);
+            
+            if (decision2 === 1) {
+                alert("Going through the forest is challenging, but you make it without major issues.");
+            } else if (decision2 === 2) {
+                alert("You find a longer but safer path around the forest.");
+            } else {
+                alert("Climbing the tree gives you a better view, and you spot a shortcut through the forest.");
+            }
+            
+            // Decision 3
+            var decision3 = makeDecision("You encounter a group of wild animals. How do you handle the situation?", ["Run away", "Stand still", "Make loud noises"]);
+            
+            if (decision3 === 1) {
+                alert("Running away attracts the attention of the animals. Fortunately, you manage to escape.");
+            } else if (decision3 === 2) {
+                alert("Standing still makes the animals lose interest, and they move away.");
+            } else {
+                alert("Making loud noises scares the animals, and they run away.");
+            }
+            
+            // Decision 4
+            var decision4 = makeDecision("As you continue, you find a village. What do you want to do?", ["Rest and ask for directions", "Avoid the village and continue", "Trade with the villagers"]);
+            
+            if (decision4 === 1) {
+                alert("Resting in the village helps you gather information about the route. You receive helpful directions.");
+            } else if (decision4 === 2) {
+                alert("Avoiding the village keeps you on track, but you miss out on potential assistance.");
+            } else {
+                alert("Trading with the villagers provides you with valuable supplies for your journey.");
+            }
+            
+            // Decision 5
+            var decision5 = makeDecision("You reach the border. How do you want to approach it?", ["Use a legal border crossing", "Find a hidden route", "Bribe the border guards"]);
+            
+            if (decision5 === 1) {
+                alert("Using a legal border crossing ensures a smooth entry into the next country.");
+            } else if (decision5 === 2) {
+                alert("Finding a hidden route helps you avoid official scrutiny, but it's a riskier path.");
+            } else {
+                alert("Bribing the border guards allows you to pass, but it might have consequences later.");
+            }
+            
+            // Decision 6
+            var decision6 = makeDecision("You face a harsh weather condition. What will you do?", ["Continue the journey regardless", "Find shelter and wait for the weather to improve", "Change your route to avoid the weather"]);
+            
+            if (decision6 === 1) {
+                alert("Continuing the journey in harsh weather is tough, but you endure it.");
+            } else if (decision6 === 2) {
+                alert("Finding shelter helps you wait out the bad weather, ensuring a safer journey later.");
+            } else {
+                alert("Changing your route proves to be a wise decision, avoiding the worst of the weather conditions.");
+            }
+            
+            // Decision 7
+            var decision7 = makeDecision("You encounter a group of fellow travelers. How do you want to interact with them?", ["Join them and travel together", "Observe from a distance", "Avoid them and continue alone"]);
+            
+            if (decision7 === 1) {
+                alert("Joining the group of travelers adds companionship to your journey, making it more enjoyable.");
+            } else if (decision7 === 2) {
+                alert("Observing from a distance allows you to gather information about the route without direct interaction.");
+            } else {
+                alert("Avoiding the group keeps your journey more solitary, but you maintain independence.");
+            }
+            
+            alert("Congratulations! You successfully navigated the Dunki route and reached America!");
+        }
+    </script>
+</body>
+</html>
